@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1469413582 source:c:\users\john\development\c++\boilerplate\src\game.cpp
+	"game.h"
+
+1469413320 c:\users\john\development\c++\boilerplate\src\game.h
+	"WakeEngine/WakeEngine.h"
+
+1469412633 c:\users\john\development\c++\boilerplate\src\wakeengine\wakeengine.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_mixer.h>
+	<SDL2/SDL_ttf.h>
+	<iostream>
+	<sstream>
+	<string>
+	<cmath>
+	<stdlib.h>
+	<time.h>
+	<vector>
+	<map>
+	<fstream>
+
+1469413596 source:c:\users\john\development\c++\boilerplate\src\main.cpp
+	"game.h"
+
+1469412501 source:c:\users\john\development\c++\boilerplate\src\mainmenu.cpp
+	"game.h"
+
+1469413251 source:c:\users\john\development\c++\boilerplate\src\wakeengine\wakeengine.cpp
+	"WakeEngine.h"
+
+1469412512 source:c:\users\john\development\c++\boilerplate\src\gamestate.cpp
+	"game.h"
+
+1469412501 source:c:\users\john\development\c++\boilerplate\src\mainmenustate.cpp
+	"game.h"
+

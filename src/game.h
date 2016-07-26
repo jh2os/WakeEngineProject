@@ -5,6 +5,8 @@
 
 class Game {
 public:
+    bool running;
+
     Game(string windowTitle, int width, int height);
     // Load in engine and other modules
     WakeEngine *e;

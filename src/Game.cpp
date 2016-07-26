@@ -2,8 +2,9 @@
 
 Game::Game(string windowTitle, int width, int height) {
     e = new WakeEngine(windowTitle, width, height);
+    running = true;
 }
 
-Game::load() {
-    e.
+int Game::load() {
+    return 0;
 }

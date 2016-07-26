@@ -14,6 +14,105 @@ WakeEngine::WakeEngine(string title, int w, int h) {
     int flags = 0;
     Mix_Init(flags);
     Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 4096);
+    Mix_Volume(-1, MIX_MAX_VOLUME);
+    Mix_VolumeMusic(MIX_MAX_VOLUME);
+}
+
+void WakeEngine::loadGlobalTexture(string title, string filename) {
+    SDL_Surface *bmp = SDL_LoadBMP(filename.c_str());
+    SDL_SetColorKey(bmp, SDL_TRUE, SDL_MapRGB(bmp->format, 0, 0xFF, 0xFF));
+    globalTexture[title] = SDL_CreateTextureFromSurface(wakeRender, bmp);
+    SDL_FreeSurface(bmp);
+}
+
+void WakeEngine::loadTexture(string title, string filename) {
+    SDL_Surface *bmp = SDL_LoadBMP(filename.c_str());
+    SDL_SetColorKey(bmp, SDL_TRUE, SDL_MapRGB(bmp->format, 0, 0xFF, 0xFF));
+    texture[title] = SDL_CreateTextureFromSurface(wakeRender, bmp);
+    SDL_FreeSurface(bmp);
+}
+
+void WakeEngine::loadGlobalFont(string name, string filename, int size) {
+    globalFont[name] = TTF_OpenFont(filename.c_str(), size);
+}
+
+void WakeEngine::loadFont(string name, string filename, int size) {
+    font[name] = TTF_OpenFont(filename.c_str(), size);
+}
+
+void WakeEngine::loadGlobalSound(string name, string filename) {
+    globalSound[name] = Mix_LoadWAV(filename.c_str());
+}
+
+void WakeEngine::loadSound(string name, string filename) {
+    sound[name] = Mix_LoadWAV(filename.c_str());
+}
+
+void WakeEngine::loadGlobalMusic(string name, string filename) {
+    music[name] = Mix_LoadMUS(filename.c_str());
+}
+
+void WakeEngine::loadMusic(string name, string filename) {
+    music[name] = Mix_LoadMUS(filename.c_str());
+}
+
+SDL_Texture * WakeEngine::getTexture(string tex) {
+    return texture[tex];
+}
+
+TTF_Font * WakeEngine::getFont(string name) {
+    return font[name];
+}
+
+Mix_Chunk * WakeEngine::getSound(string name) {
+    return sound[name];
+}
+
+Mix_Music * WakeEngine::getMusic(string name) {
+    return music[name];
+}
+
+
+void draw(string texture, SDL_Rect* srcrect, SDL_Rect* dstrect, double angle, SDL_Point* center,SDL_RendererFlip flip) {
+
+}
+
+void draw(string texture, SDL_Rect* srcrect, SDL_Rect* dstrect) {
+
+}
+
+void draw(string texture, int x, int y) {
+
+}
+
+void WakeEngine::setVolume(int percent) {
+
+    percent = (percent > 100) ? 100 : percent;
+    percent = (percent < 0) ? 0 : percent;
+
+    float divisor = percent / 100;
+
+    globalVolume = int(SDL_MIX_MAXVOLUME * divisor);
+}
+
+void WakeEngine::setSFXVolume(int percent) {
+
+    percent = (percent > 100) ? 100 : percent;
+    percent = (percent < 0) ? 0 : percent;
+
+    float divisor = percent / 100;
+
+    sfxVolume = int(globalVolume * divisor);
+}
+
+void WakeEngine::setMusicVolume(int percent) {
+
+    percent = (percent > 100) ? 100 : percent;
+    percent = (percent < 0) ? 0 : percent;
+
+    float divisor = percent / 100;
+
+    musicVolume = int(globalVolume * divisor);
 }
 
 

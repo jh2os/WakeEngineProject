@@ -1,11 +1,15 @@
 # depslib dependency file v1.0
-1469494225 source:c:\users\john\development\c++\boilerplate\src\game.cpp
+1469590506 source:c:\users\john\development\c++\boilerplate\src\game.cpp
 	"game.h"
 
-1469494226 c:\users\john\development\c++\boilerplate\src\game.h
+1469594110 c:\users\john\development\c++\boilerplate\src\game.h
 	"WakeEngine/WakeEngine.h"
+	"WakeEngine/WakeState.h"
+	"MainMenuState.h"
+	"GameState.h"
+	"SplashState.h"
 
-1469493607 c:\users\john\development\c++\boilerplate\src\wakeengine\wakeengine.h
+1469502645 c:\users\john\development\c++\boilerplate\src\wakeengine\wakeengine.h
 	<SDL2/SDL.h>
 	<SDL2/SDL_mixer.h>
 	<SDL2/SDL_ttf.h>
@@ -19,18 +23,39 @@
 	<map>
 	<fstream>
 
-1469494860 source:c:\users\john\development\c++\boilerplate\src\main.cpp
+1469594041 source:c:\users\john\development\c++\boilerplate\src\main.cpp
 	"game.h"
 
 1469412501 source:c:\users\john\development\c++\boilerplate\src\mainmenu.cpp
 	"game.h"
 
-1469494108 source:c:\users\john\development\c++\boilerplate\src\wakeengine\wakeengine.cpp
+1469502748 source:c:\users\john\development\c++\boilerplate\src\wakeengine\wakeengine.cpp
 	"WakeEngine.h"
 
-1469412512 source:c:\users\john\development\c++\boilerplate\src\gamestate.cpp
-	"game.h"
+1469593163 source:c:\users\john\development\c++\boilerplate\src\gamestate.cpp
+	"GameState.h"
 
-1469412501 source:c:\users\john\development\c++\boilerplate\src\mainmenustate.cpp
+1469590670 source:c:\users\john\development\c++\boilerplate\src\mainmenustate.cpp
+
+1469594205 c:\users\john\development\c++\boilerplate\src\wakeengine\wakestate.h
+	<map>
+	<string>
+	<SDL2/SDL.h>
+
+1469593348 source:c:\users\john\development\c++\boilerplate\src\wakeengine\wakestate.cpp
+	"WakeState.h"
+
+1469592883 c:\users\john\development\c++\boilerplate\src\mainmenustate.h
+	"WakeEngine/WakeState.h"
+
+1469592894 c:\users\john\development\c++\boilerplate\src\gamestate.h
+	"WakeEngine/WakeState.h"
+
+1469593127 c:\users\john\development\c++\boilerplate\src\splashstate.h
 	"game.h"
+	"WakeEngine/WakeEngine.h"
+	"WakeEngine/WakeState.h"
+
+1469593109 source:c:\users\john\development\c++\boilerplate\src\splashstate.cpp
+	"SplashState.h"
 

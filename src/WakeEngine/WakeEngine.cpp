@@ -72,19 +72,40 @@ Mix_Music * WakeEngine::getMusic(string name) {
     return music[name];
 }
 
-
-void draw(string texture, SDL_Rect* srcrect, SDL_Rect* dstrect, double angle, SDL_Point* center,SDL_RendererFlip flip) {
-
+SDL_Renderer * WakeEngine::renderer() {
+    return wakeRender;
 }
 
-void draw(string texture, SDL_Rect* srcrect, SDL_Rect* dstrect) {
 
+void WakeEngine::draw(string texture, SDL_Rect* srcrect, SDL_Rect* dstrect, double angle, SDL_Point* center,SDL_RendererFlip flip) {
+    SDL_RenderCopy(wakeRender, getTexture(texture), NULL, NULL);
 }
 
-void draw(string texture, int x, int y) {
-
+void WakeEngine::draw(string texture, SDL_Rect* srcrect, SDL_Rect* dstrect) {
+    SDL_RenderCopy(wakeRender, getTexture(texture), NULL, NULL);
 }
 
+void WakeEngine::draw(string texture, int x, int y) {
+    SDL_RenderCopy(wakeRender, getTexture(texture), NULL, NULL);
+}
+
+SDL_Rect WakeEngine::box(int x, int y, int w, int h) {
+    SDL_Rect thebox;
+    thebox.x = x;
+    thebox.y = y;
+    thebox.w = w;
+    thebox.h = h;
+
+    return thebox;
+}
+void WakeEngine::drawBox(int R, int G, int B, int Alpha, int x, int y, int w, int h) {
+    SDL_SetRenderDrawColor(wakeRender, R, G, B, Alpha);
+    SDL_Rect boxbox = box(x,y,w,h);
+    SDL_RenderFillRect(wakeRender, &boxbox);
+}
+void WakeEngine::display() {
+    SDL_RenderPresent(wakeRender);
+}
 void WakeEngine::setVolume(int percent) {
 
     percent = (percent > 100) ? 100 : percent;
@@ -114,5 +135,6 @@ void WakeEngine::setMusicVolume(int percent) {
 
     musicVolume = int(globalVolume * divisor);
 }
+
 
 

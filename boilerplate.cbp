@@ -35,9 +35,15 @@
 		<Unit filename="smpeg2.dll" />
 		<Unit filename="src/Game.cpp" />
 		<Unit filename="src/GameState.cpp" />
+		<Unit filename="src/GameState.h" />
 		<Unit filename="src/MainMenuState.cpp" />
+		<Unit filename="src/MainMenuState.h" />
+		<Unit filename="src/SplashState.cpp" />
+		<Unit filename="src/SplashState.h" />
 		<Unit filename="src/WakeEngine/WakeEngine.cpp" />
 		<Unit filename="src/WakeEngine/WakeEngine.h" />
+		<Unit filename="src/WakeEngine/WakeState.cpp" />
+		<Unit filename="src/WakeEngine/WakeState.h" />
 		<Unit filename="src/game.h" />
 		<Unit filename="src/main.cpp" />
 		<Unit filename="zlib1.dll" />

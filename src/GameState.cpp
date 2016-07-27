@@ -1,22 +1,17 @@
-#include "game.h"
+#include "GameState.h"
 
-void Game::game() {
+int GameState::load() {
+    return 0;
+}
 
-    /*switch(e.state.status) {
-        case LOADING: {
+int GameState::logic() {
+    return 0;
+}
 
-            break;
-        }
-        case LOOP: {
+int GameState::render() {
+    return 0;
+}
 
-            break;
-        }
-        case RENDER: {
-            break;
-        }
-        case CLOSE: {
-
-            break;
-        }
-    }*/
+int GameState::quit() {
+    return 0;
 }

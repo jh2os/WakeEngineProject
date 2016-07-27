@@ -22,6 +22,7 @@ private:
     SDL_Window *wakeWindow;
     SDL_Event wakeEvent;
     SDL_Renderer *wakeRender;
+
     map<string, SDL_Texture *> globalTexture;
     map<string, SDL_Texture *> texture;
     map<string, TTF_Font *> globalFont;
@@ -56,9 +57,14 @@ public:
     Mix_Chunk * getSound(string sound);
     Mix_Music * getMusic(string music);
 
+    SDL_Renderer * renderer();
     void draw(string texture, SDL_Rect* srcrect, SDL_Rect* dstrect, double angle, SDL_Point* center,SDL_RendererFlip flip);
     void draw(string texture, SDL_Rect* srcrect, SDL_Rect* dstrect);
     void draw(string texture, int x, int y);
+    SDL_Rect box(int Xb, int Yb, int Wb, int Hb);
+    void drawBox(int R, int G, int B, int Alpha, int x, int y, int w, int h);
+    void display();
+
 
     void setVolume(int percent);
     void setSFXVolume(int percent);

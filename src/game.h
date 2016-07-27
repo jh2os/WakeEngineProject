@@ -2,23 +2,25 @@
 #define GAME_H_INCLUDED
 
 #include "WakeEngine/WakeEngine.h"
+#include "WakeEngine/WakeState.h"
+#include "MainMenuState.h"
+#include "GameState.h"
+#include "SplashState.h"
+
 
 class Game {
 public:
     bool running;
 
+    // Constructor
     Game(string windowTitle, int width, int height);
+
     // Load in engine and other modules
     WakeEngine *e;
-    //WakeMenu m;
+    WakeStateManager *gamestate;
 
     // Load in your global assets
-    int load();
-
-    // Functions for when you are in different states
-    void mainMenu();
-    void game();
-
+    void loop();
 };
 
 

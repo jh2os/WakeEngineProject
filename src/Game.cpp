@@ -1,11 +1,9 @@
 #include "game.h"
 
-Game::Game(string windowTitle, int width, int height) {
+Game::Game(string windowTitle, int width, int height, int fps) {
     e = new WakeEngine(windowTitle, width, height);
-    gamestate = new WakeStateManager(32);
+    gamestate = new WakeStateManager(fps);
     running = true;
-    gamestate->registerState("splash", new SplashState(e));
-    gamestate->setState("splash");
 }
 
 

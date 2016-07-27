@@ -3,9 +3,6 @@
 
 #include "WakeEngine/WakeEngine.h"
 #include "WakeEngine/WakeState.h"
-#include "MainMenuState.h"
-#include "GameState.h"
-#include "SplashState.h"
 
 
 class Game {
@@ -13,7 +10,7 @@ public:
     bool running;
 
     // Constructor
-    Game(string windowTitle, int width, int height);
+    Game(string windowTitle, int width, int height, int fps);
 
     // Load in engine and other modules
     WakeEngine *e;

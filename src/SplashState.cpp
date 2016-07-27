@@ -25,9 +25,9 @@ int SplashState::logic() {
 
         // Fade Logo maths
         if (time - SDL_GetTicks()  < 2000)
-            fadevar = (fadevar > 255) ? 255 : fadevar + 2;
+            fadevar = (fadevar > 255) ? 255 : fadevar + 3;
         else if ( time - SDL_GetTicks() > 2000)
-            fadevar = (fadevar > 0) ? 0 : fadevar - 2;
+            fadevar = (fadevar > 0) ? 0 : fadevar - 3;
     }
     return 0;
 }

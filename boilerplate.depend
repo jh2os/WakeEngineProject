@@ -1,13 +1,10 @@
 # depslib dependency file v1.0
-1469590506 source:c:\users\john\development\c++\boilerplate\src\game.cpp
+1469595628 source:c:\users\john\development\c++\boilerplate\src\game.cpp
 	"game.h"
 
-1469594110 c:\users\john\development\c++\boilerplate\src\game.h
+1469595579 c:\users\john\development\c++\boilerplate\src\game.h
 	"WakeEngine/WakeEngine.h"
 	"WakeEngine/WakeState.h"
-	"MainMenuState.h"
-	"GameState.h"
-	"SplashState.h"
 
 1469502645 c:\users\john\development\c++\boilerplate\src\wakeengine\wakeengine.h
 	<SDL2/SDL.h>
@@ -23,8 +20,11 @@
 	<map>
 	<fstream>
 
-1469594041 source:c:\users\john\development\c++\boilerplate\src\main.cpp
+1469595645 source:c:\users\john\development\c++\boilerplate\src\main.cpp
 	"game.h"
+	"MainMenuState.h"
+	"GameState.h"
+	"SplashState.h"
 
 1469412501 source:c:\users\john\development\c++\boilerplate\src\mainmenu.cpp
 	"game.h"
@@ -42,7 +42,7 @@
 	<string>
 	<SDL2/SDL.h>
 
-1469593348 source:c:\users\john\development\c++\boilerplate\src\wakeengine\wakestate.cpp
+1469594324 source:c:\users\john\development\c++\boilerplate\src\wakeengine\wakestate.cpp
 	"WakeState.h"
 
 1469592883 c:\users\john\development\c++\boilerplate\src\mainmenustate.h
@@ -56,6 +56,6 @@
 	"WakeEngine/WakeEngine.h"
 	"WakeEngine/WakeState.h"
 
-1469593109 source:c:\users\john\development\c++\boilerplate\src\splashstate.cpp
+1469595843 source:c:\users\john\development\c++\boilerplate\src\splashstate.cpp
 	"SplashState.h"
 
